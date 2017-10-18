@@ -1,4 +1,4 @@
-# Using Docker Machine on Azure
+# Using Docker Machine
 
 In this workshop we'll run through what the ```docker-machine``` command line tool is and how to use it to deploy a VM in Azure and then auto install docker into that VM.
 

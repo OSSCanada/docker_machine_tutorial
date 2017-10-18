@@ -31,15 +31,15 @@ docker-machine create \
 ```
 
 #### Parameter flags explained
-- ```-d``` specifies the provider driver to use (Azure in our case)
--  ```--azure-subscription-id``` specifiy the azure subscription/account id you wish to deploy to (you may have multiple billing subscription/accounts associated to you)
-- ```--azure-image``` specifiy the type of OS Image you wish to deploy.  Follows the same naming format ("Urn" format) as Azure-CLI/ARM template e.g. ```"Canonical:UbuntuServer:16.04-LTS:latest"```
+- ```--driver``` or ```-d``` specifies the provider driver to use (Azure in our case)
+- ```--azure-subscription-id``` specifiy the azure subscription/account id you wish to deploy to (you may have multiple billing subscription/accounts associated to you)
+- ```--azure-image``` specifiy the type of OS Image you wish to deploy.  Follows the same naming format ("Urn" format) as Azure-CLI/ARM template e.g. ```"Canonical:UbuntuServer:14.04.5-LTS:latest"```
 - ```--azure-vm-size``` specify the size of the VM you wish to deploy including quotes.  Follows the same naming format as Azure-CLI/ARM template e.g. ```"Standard_D1_v2"```
 - ```--azure-resource-group``` **OPTIONALLY** specify the azure resource group to deploy your VM to.  This vm can be an existing one or a new one.  If left out, defaults to ```"docker-machine"``` as the resource group to deploy or create.
 - ```--azure-location``` specifiy the Azure datacentre location to deploy to e.g. ```"canadacentral"```
 - ```<vm_name>``` specify the name of the new VM to be deployed.  This will be used as the name to connect to the vm and the VM's hostname. 
 
-### List all created docker-machine VMs
+### List all created docker-machine host machines
 ```:bash
 docker-machine ls
 ```

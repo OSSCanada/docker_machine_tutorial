@@ -1,14 +1,20 @@
 # Using Docker Machine
 
-In this workshop we'll run through what the ```docker-machine``` command line tool is and how to use it to deploy a VM in Azure and then auto install docker into that VM.
+In this workshop we'll run through what the ```docker-machine``` command line tool, what it is and how to use it to provision a machine with the Docker Engine installed automatically.  Our tutorial will be in the context of deploying a VM in Microsoft Azure.
 
 ## Requirements
-- Docker for [Mac](https://download.docker.com/mac/stable/Docker.dmg) or [Windows](https://download.docker.com/win/stable/InstallDocker.msi) installed (includes ```docker```, ```docker-machine``` and ```docker-compose``` commands)
-- (Optional) [Azure-CLI](https://azure.github.io/projects/clis/) to view/create/modify Azure Resources.
+- Docker tools:
+    - Docker for [Mac](https://download.docker.com/mac/stable/Docker.dmg) (includes ```docker```, ```docker-machine``` and ```docker-compose```)
+    - Docker for [Windows](https://download.docker.com/win/stable/InstallDocker.msi) (includes ```docker```, ```docker-machine``` and ```docker-compose```)
+    - Azure Cloud Shell
+        - If you have an Azure Account, you can access a free Ubuntu Bash Shell from the Azure Portal in a web browser
+        - Includes the require docker tooling, ```Azure-CLI``` and other tools
+- Optional
+    - [Azure-CLI](https://azure.github.io/projects/clis/) to view/create/modify Azure Specific Resources
 
 ## What is ```docker-machine```
 
-Docker provides various command line tools.  The ```docker``` command is the most utilized one, and is the one to deploy containers to your target docker host environment.  You can consider ```docker-machine``` a docker vm provisioning tool.  It helps you to provision a VM and install docker onto it.  You can remote to that VM using ```docker-machine ssh <vm_name>``` command for any additional administrative tasks you may need to do.  See [below](#basic-commands) for additional commands.
+Docker provides various command line tools.  The ```docker``` command (aka "docker client") is the most utilized one, and is used to deploy containers to your target docker host environment.  You can consider ```docker-machine``` a docker host provisioning tool.  It helps you to provision a machine (Azure VM in our examples) and install docker onto it with one command line tool.  You can remotely connect to the provisioned Docker host using ```docker-machine ssh <docker_host_name>``` command to directly performing administrative tasks on that target host.  See [below](#basic-commands) for additional commands.
 
 ## Basic commands
 
